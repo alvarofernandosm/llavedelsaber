@@ -1,3 +1,4 @@
 <resources>
     <dimen name="dim_notice_size">100dp</dimen>
+    <dimen name="dim_input_size">25dp</dimen>
 </resources>

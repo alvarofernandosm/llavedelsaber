@@ -23,7 +23,7 @@
             android:weightSum="1.0">
 
             <ImageView
-                android:layout_width="0sp"
+                android:layout_width="1sp"
                 android:layout_weight=".33"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_app_logo"/>
@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:weightSum="1.0"
                 android:orientation="horizontal">
-                
+
             </LinearLayout>
 
                 <TextView
@@ -48,6 +48,7 @@
                     android:singleLine="true"
                     android:id="@+id/tv_input_document"
                     android:text="@string/app_name"/>
+
 
             </LinearLayout>
 
