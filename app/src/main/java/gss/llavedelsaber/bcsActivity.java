@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -75,7 +76,7 @@ public class bcsActivity extends AppCompatActivity implements OnScanListener {
             public void run() {
                 try {
                     assert (findViewById(R.id.tv_input_document)) != null;
-                    ((TextView) findViewById(R.id.tv_input_document)).setText(scanSession.getAllRecognizedCodes().get(scanSession.getAllRecognizedCodes().size()-1).getData());
+                    ((EditText) findViewById(R.id.tv_input_document)).setText(scanSession.getAllRecognizedCodes().get(scanSession.getAllRecognizedCodes().size()-1).getData());
                 } catch (IndexOutOfBoundsException e) {
                     Log.e("Error", e.getMessage());
                 }

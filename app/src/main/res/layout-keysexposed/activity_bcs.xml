@@ -34,13 +34,11 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <TextView
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dim_input_size"
                     android:singleLine="true"
-                    android:id="@+id/tv_input_document"
-                    android:text="@string/app_name"
-                    android:textSize="@dimen/dim_input_size"/>
+                    android:id="@+id/tv_input_document" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
