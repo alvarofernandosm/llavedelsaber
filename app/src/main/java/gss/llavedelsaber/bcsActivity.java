@@ -1,9 +1,15 @@
 package gss.llavedelsaber;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.scandit.barcodepicker.BarcodePicker;
 import com.scandit.barcodepicker.OnScanListener;
@@ -11,6 +17,8 @@ import com.scandit.barcodepicker.ScanSession;
 import com.scandit.barcodepicker.ScanSettings;
 import com.scandit.barcodepicker.ScanditLicense;
 import com.scandit.recognition.Barcode;
+
+import java.util.List;
 
 
 /**
@@ -32,10 +40,11 @@ public class bcsActivity extends AppCompatActivity implements OnScanListener {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
+
         setContentView(R.layout.activity_bcs);
 
-        init_UI();
         init_System();
+        init_UI();
 
     }
 
@@ -43,7 +52,8 @@ public class bcsActivity extends AppCompatActivity implements OnScanListener {
      * Init all basics app user interface requirements
      */
     private void init_UI() {
-        setContentView(picker);
+        assert (findViewById(R.id.ll_camera_scanner)) != null && picker != null;
+        ((LinearLayout) findViewById(R.id.ll_camera_scanner)).addView(picker);
     }
 
     /**
@@ -58,11 +68,19 @@ public class bcsActivity extends AppCompatActivity implements OnScanListener {
         picker.setOnScanListener(this);
     }
 
-
-
     @Override
-    public void didScan(ScanSession scanSession) {
-
+    public void didScan(final ScanSession scanSession) {
+        new Handler(Looper.getMainLooper()).post(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    assert (findViewById(R.id.tv_input_document)) != null;
+                    ((TextView) findViewById(R.id.tv_input_document)).setText(scanSession.getAllRecognizedCodes().get(scanSession.getAllRecognizedCodes().size()-1).getData());
+                } catch (IndexOutOfBoundsException e) {
+                    Log.e("Error", e.getMessage());
+                }
+            }
+        });
     }
 
     @Override
