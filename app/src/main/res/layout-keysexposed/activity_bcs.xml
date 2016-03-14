@@ -34,20 +34,70 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="1.0"
-                android:orientation="horizontal">
-
-            </LinearLayout>
-
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dim_input_size"
                     android:singleLine="true"
                     android:id="@+id/tv_input_document"
-                    android:text="@string/app_name"/>
+                    android:text="@string/app_name"
+                    android:textSize="@dimen/dim_input_size"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0">
+
+                    <Button
+                        android:layout_width="0sp"
+                        android:layout_weight=".33"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bt_7"
+                        android:text="7"/>
+
+                    <Button
+                        android:layout_width="0sp"
+                        android:layout_weight=".33"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bt_8"
+                        android:text="8"/>
+
+                    <Button
+                        android:layout_width="0sp"
+                        android:layout_weight=".33"
+                        android:layout_height="wrap_content"
+                        android:text="@string/st_9"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0">
+
+                    <Button
+                        android:layout_width="0sp"
+                        android:layout_weight=".33"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bt_4"
+                        android:text="4"/>
+
+                    <Button
+                        android:layout_width="0sp"
+                        android:layout_weight=".33"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bt_5"
+                        android:text="5"/>
+
+                    <Button
+                        android:layout_width="0sp"
+                        android:layout_weight=".33"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bt_6"
+                        android:text="6"/>
+
+                </LinearLayout>
 
 
             </LinearLayout>
@@ -55,7 +105,8 @@
             <LinearLayout
                 android:layout_width="0sp"
                 android:layout_weight=".33"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:id="@+id/ll_camera_scanner">
 
             </LinearLayout>
 
