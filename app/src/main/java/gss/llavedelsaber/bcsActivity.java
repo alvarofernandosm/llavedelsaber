@@ -52,8 +52,11 @@ public class bcsActivity extends AppCompatActivity implements OnScanListener {
      * Init all basics app user interface requirements
      */
     private void init_UI() {
+<<<<<<< HEAD
         assert (findViewById(R.id.ll_camera_scanner)) != null && picker != null;
         ((LinearLayout) findViewById(R.id.ll_camera_scanner)).addView(picker);
+=======
+>>>>>>> origin/master
     }
 
     /**
