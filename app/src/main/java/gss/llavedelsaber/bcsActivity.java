@@ -43,7 +43,6 @@ public class bcsActivity extends AppCompatActivity implements OnScanListener {
      * Init all basics app user interface requirements
      */
     private void init_UI() {
-        setContentView(picker);
     }
 
     /**

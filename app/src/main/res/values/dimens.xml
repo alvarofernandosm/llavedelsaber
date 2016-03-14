@@ -1,4 +1,5 @@
 <resources>
-    <dimen name="dim_notice_size">100dp</dimen>
+    <dimen name="dim_banner_size">100dp</dimen>
+    <dimen name="dim_notice_size">30dp</dimen>
     <dimen name="dim_input_size">25dp</dimen>
 </resources>

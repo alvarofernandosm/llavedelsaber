@@ -8,6 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dim_notice_size"
         android:orientation="vertical">
         
         <ImageView
@@ -19,7 +20,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="@dimen/dim_notice_size"
             android:weightSum="1.0">
 
             <ImageView
@@ -53,19 +53,20 @@
                         android:layout_weight=".33"
                         android:layout_height="wrap_content"
                         android:id="@+id/bt_7"
-                        android:text="7"/>
+                        android:text="@string/st_7"/>
 
                     <Button
                         android:layout_width="0sp"
                         android:layout_weight=".33"
                         android:layout_height="wrap_content"
                         android:id="@+id/bt_8"
-                        android:text="8"/>
+                        android:text="@string/st_8"/>
 
                     <Button
                         android:layout_width="0sp"
                         android:layout_weight=".33"
                         android:layout_height="wrap_content"
+                        android:id="@+id/bt_9"
                         android:text="@string/st_9"/>
 
                 </LinearLayout>
@@ -81,24 +82,75 @@
                         android:layout_weight=".33"
                         android:layout_height="wrap_content"
                         android:id="@+id/bt_4"
-                        android:text="4"/>
+                        android:text="@string/st_4"/>
 
                     <Button
                         android:layout_width="0sp"
                         android:layout_weight=".33"
                         android:layout_height="wrap_content"
                         android:id="@+id/bt_5"
-                        android:text="5"/>
+                        android:text="@string/st_5"/>
 
                     <Button
                         android:layout_width="0sp"
                         android:layout_weight=".33"
                         android:layout_height="wrap_content"
                         android:id="@+id/bt_6"
-                        android:text="6"/>
+                        android:text="@string/st_6"/>
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0">
+
+                    <Button
+                        android:layout_width="0sp"
+                        android:layout_weight=".33"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bt_3"
+                        android:text="@string/st_3"/>
+
+                    <Button
+                        android:layout_width="0sp"
+                        android:layout_weight=".33"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bt_2"
+                        android:text="@string/st_2"/>
+
+                    <Button
+                        android:layout_width="0sp"
+                        android:layout_weight=".33"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bt_1"
+                        android:text="@string/st_1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0">
+
+                    <Button
+                        android:layout_width="0sp"
+                        android:layout_weight=".33"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bt_0"
+                        android:text="@string/st_0"/>
+
+                    <Button
+                        android:layout_width="0sp"
+                        android:layout_weight=".66"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bt_OK"
+                        android:text="@string/st_OK"/>
+
+
+            </LinearLayout>
 
             </LinearLayout>
 
@@ -106,7 +158,8 @@
                 android:layout_width="0sp"
                 android:layout_weight=".33"
                 android:layout_height="match_parent"
-                android:id="@+id/ll_camera_scanner">
+                android:id="@+id/ll_camera_scanner"
+                android:orientation="horizontal">
 
             </LinearLayout>
 
